@@ -69,7 +69,7 @@ services:
     restart: unless-stopped
     volumes:
       - HOST_DIR/hooks:/app/hooks
-      -HOST_DIR/scripts:/app/scripts
+      - HOST_DIR/scripts:/app/scripts
     ports:
       - 3000:3000
 ```
