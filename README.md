@@ -33,3 +33,23 @@ node src/index.js
 ```
 
 which will start the application on port 3000
+
+### With Docker
+
+It is recommended to run the application in a Docker container in order to avoid any issues. To do that you first need to build the image by going to the root of the project and running
+
+```sh
+docker build -t IMAGE_NAME .
+```
+
+which will build the webhook-executor Docker image. To run it you can either use standard Docker or Docker compose.
+
+#### Run using standard Docker
+
+To run the image using docker you need to use the command.
+
+```sh
+docker run -d -v HOST_DIR/hooks:/app/hooks -v HOST_DIR/scripts:/app/scripts -p 3000:3000 IMAGE_NAME
+```
+
+This will start up the docker container on port 3000.
