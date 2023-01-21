@@ -53,3 +53,23 @@ docker run -d -v HOST_DIR/hooks:/app/hooks -v HOST_DIR/scripts:/app/scripts -p 3
 ```
 
 This will start up the docker container on port 3000.
+
+#### Run using Docker compose
+
+Here is an example `docker-compose.yml` file you can use if you want to use docker compose.
+
+```yml
+version: "3.8"
+
+services:
+
+  webhook-executor:
+    container_name: webhook-executor
+    image: IMAGE_NAME
+    restart: unless-stopped
+    volumes:
+      - HOST_DIR/hooks:/app/hooks
+      -HOST_DIR/scripts:/app/scripts
+    ports:
+      - 3000:3000
+```
