@@ -31,3 +31,5 @@ which will install all the needed dependencies. Once you have done that you can 
 ```sh
 node src/index.js
 ```
+
+which will start the application on port 3000
