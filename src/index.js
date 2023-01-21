@@ -1,13 +1,6 @@
-console.log("Starting webhook executor...")
+console.log("Starting webhook executor...");
 
-const fs = require("fs")
+const fs = require("fs");
 
-var hooksRawJson;
+let hooksJson = JSON.parse(fs.readFileSync("./hooks/hooks.json"));
 
-fs.readFile("./hooks/hooks.json", 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    hooksRawJson = data;
-});
