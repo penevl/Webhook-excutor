@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Issue created",
+        "url": "/issueCreated",
+        "script": "issueCreated.sh"
+    },
+    {
+        "name": "Push to main branch",
+        "url": "/push/main",
+        "script": "pushToMain.sh"
+    }
+]
