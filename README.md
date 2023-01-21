@@ -15,3 +15,19 @@ You can edit the [`hooks.json`](https://git.penevl.org/elduko/webhook-executor/-
 ### Adding scripts to be executed
 
 Once you have filled out all the fields you can place the script which you want to be executed in the `scripts` folder and you also need to make sure that the script name matches exactly what is in the `hooks.json` script field field.
+
+## Running the application
+
+### On bare metal
+
+If you want to run the application on bare metal first you must insure you have both nodejs and npm installed. Then you can go in to the app base direcotry and run
+
+```sh
+npm install
+```
+
+which will install all the needed dependencies. Once you have done that you can run
+
+```sh
+node src/index.js
+```
