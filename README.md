@@ -49,7 +49,7 @@ which will build the webhook-executor Docker image. To run it you can either use
 To run the image using docker you need to use the command.
 
 ```sh
-docker run -d -v HOST_DIR/hooks:/app/hooks -v HOST_DIR/scripts:/app/scripts -p 3000:3000 IMAGE_NAME
+docker run -d --restart unless-stopped -v HOST_DIR/hooks:/app/hooks -v HOST_DIR/scripts:/app/scripts -p 3000:3000 IMAGE_NAME
 ```
 
 This will start up the docker container on port 3000.
