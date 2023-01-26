@@ -2,6 +2,11 @@
     {
         "name": "Example name",
         "url": "/example/endpoint",
-        "script": "exampleScript.sh"
+        "script": "exampleScript.sh",
+        "arguments": [
+            "--exampleArgument",
+            "--useDifferentExample true",
+            "--exampleLevel 69"
+        ]
     }
 ]
