@@ -11,6 +11,7 @@ You can edit the `hooks.json` file located in the `hooks` directory to add more 
 1. name - can be whatever you want.
 2. url - needs to start with "/" and inside you can put only letters and numbers.
 3. script - needs to be one whole word
+4. arguments - an array. You need to seperate each argument from one another;
 
 ### Adding scripts to be executed
 
