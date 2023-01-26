@@ -6,7 +6,7 @@ Webhook executor is a nodejs application where you can define webhook URLs in a 
 
 ### Editing the hooks.json file
 
-You can edit the `hooks.json` file located in the `hooks` directory to add more webhooks. Each hook requires three fields to be filled out. You can also find an example of the for the file [here](https://git.penevl.org/elduko/webhook-executor/-/blob/master/hooks/hooks.json.example)
+You can edit the `hooks.json` file located in the `hooks` directory to add more webhooks. Each hook requires three fields to be filled out. You can also find an example for the file [here](https://git.penevl.org/elduko/webhook-executor/-/blob/master/hooks/hooks.json.example)
 
 1. name - can be whatever you want.
 2. url - needs to start with "/" and inside you can put only letters and numbers.
