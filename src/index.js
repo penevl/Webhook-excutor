@@ -23,7 +23,7 @@ hooksJson.forEach(element => {
 
         let args = convertArguments(arguments);
 
-        exec("sh " + __dirname + "/../scripts/" + script + " " + args, (error, stdout, stderr) => {
+        exec("sh " + __dirname + "/../scripts/" + script + args, (error, stdout, stderr) => {
             console.log("[SCRIPT EXECUTION START]")
             console.log(stdout);
             console.error(stderr);
@@ -41,7 +41,7 @@ hooksJson.forEach(element => {
 
 function convertArguments(arguments){
 
-    let args = "";
+    let args = " ";
 
     arguments.forEach(element => {
         args = args + element + " ";
