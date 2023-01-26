@@ -12,7 +12,7 @@ hooksJson.forEach(element => {
     let name = element.name;
     let url = element.url;
     let script = element.script;
-
+    let arguments = element.arguments;
 
     console.log("Created a webhook listener for \"" + name + "\" with the url of \"" + url  +"\"")
 
@@ -21,7 +21,9 @@ hooksJson.forEach(element => {
         console.log("\"" + name + "\" Has been hit with a request")
         console.log("Executing script \"" + script + "\"")
 
-        exec("sh " + __dirname + "/../scripts/" + script, (error, stdout, stderr) => {
+        let args = convertArguments(arguments);
+
+        exec("sh " + __dirname + "/../scripts/" + script + " " + args, (error, stdout, stderr) => {
             console.log("[SCRIPT EXECUTION START]")
             console.log(stdout);
             console.error(stderr);
@@ -36,5 +38,18 @@ hooksJson.forEach(element => {
       })
 
 });
+
+function convertArguments(arguments){
+
+    let args = "";
+
+    arguments.forEach(element => {
+        args = args + element + " ";
+    });
+
+    console.log(args)
+    return args;
+
+}
 
 app.listen(3000, () => console.log("Server up on port 3000"))
