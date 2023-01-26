@@ -47,7 +47,6 @@ function convertArguments(arguments){
         args = args + element + " ";
     });
 
-    console.log(args)
     return args;
 
 }
